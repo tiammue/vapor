@@ -2,7 +2,6 @@
 
 Vapor is a lightweight, modern, GNOME-native companion client for Steam. Built with **Rust**, **GTK4**, and **Libadwaita**, it offers a fast, clean layout to view, launch, and manage your local Steam library alongside the official Steam client.
 
-![Vapor Interface Mockup](https://raw.githubusercontent.com/tiammue/vapor/main/logo.png) *Note: Substitute with real screenshot.*
 
 ## Features
 

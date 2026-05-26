@@ -14,7 +14,14 @@ install:
 	mkdir -p $(DESTDIR)$(BINDIR)
 	mkdir -p $(DESTDIR)$(APPDIR)
 	mkdir -p $(DESTDIR)$(ICONDIR)
-	install -m 755 target/release/vapor $(DESTDIR)$(BINDIR)/vapor
+	@if [ -f target/release/vapor ]; then \
+		install -m 755 target/release/vapor $(DESTDIR)$(BINDIR)/vapor; \
+	elif [ -f vapor ]; then \
+		install -m 755 vapor $(DESTDIR)$(BINDIR)/vapor; \
+	else \
+		echo "Error: vapor binary not found! Run 'make build' first."; \
+		exit 1; \
+	fi
 	install -m 644 assets/vapor.desktop $(DESTDIR)$(APPDIR)/vapor.desktop
 	install -m 644 assets/vapor.png $(DESTDIR)$(ICONDIR)/vapor.png
 	@echo "Vapor installed successfully to $(PREFIX)!"

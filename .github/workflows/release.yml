@@ -35,7 +35,9 @@ jobs:
         run: |
           mkdir dist
           cp target/release/vapor dist/
-          tar -czf vapor-linux.tar.gz -C dist vapor
+          cp Makefile dist/
+          cp -r assets dist/
+          tar -czf vapor-linux.tar.gz -C dist .
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2

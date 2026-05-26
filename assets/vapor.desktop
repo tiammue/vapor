@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Vapor
+Comment=Lightweight GNOME-native Steam companion client
+Exec=vapor
+Icon=vapor
+Terminal=false
+Type=Application
+Categories=Game;GTK;
+StartupNotify=true
